@@ -1,0 +1,57 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  z-index: 9999;
+}
+#main {
+  margin-top: 100px;
+}
+#visual {
+}
+.scroll li:nth-child(1) {
+  position: relative;
+  background-image: url(/images/banner_visual_01.jpg);
+  background-repeat: repeat;
+  width: 100%;
+  height: 676px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll li:nth-child(1) .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.scroll li:nth-child(1) .text em {
+  font-size: 18px;
+  font-weight: 700;
+}
+.scroll li:nth-child(1) .text span {
+  font-size: 40px;
+  font-weight: 400;
+  position: relative;
+}
+.scroll li:nth-child(1) .text strong {
+  font-weight: 500;
+}
+.scroll li:nth-child(1) .text span::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  height: 3px;
+  background: rgb(218, 0, 0);
+  width: 30px;
+}
+.scroll li:nth-child(1) .text p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 40px;
+}
