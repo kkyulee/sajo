@@ -6,20 +6,28 @@
   width: 100%;
   z-index: 9999;
 }
+.inner {
+  width: 1400px;
+  position: relative;
+}
 #main {
   margin-top: 100px;
 }
 #visual {
-}
-.scroll li:nth-child(1) {
   position: relative;
-  background-image: url(../images/banner_visual_01.jpg);
+}
+.scroll li {
+  /* display: none; */
+  position: relative;
   background-repeat: repeat;
   width: 100%;
   height: 676px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+.scroll li:nth-child(1) {
+  background-image: url(../images/banner_visual_01.jpg);
 }
 .scroll li:nth-child(1) .text {
   display: flex;
@@ -54,4 +62,69 @@
   font-weight: 300;
   text-align: center;
   margin-top: 40px;
+}
+.scroll li:nth-child(2) {
+  display: none;
+  background-image: url(../images/banner_visual_02.jpg);
+}
+
+.scroll li:nth-child(2) .text {
+  position: absolute;
+  max-width: 500px;
+  right: 500px;
+  top: 150px;
+  color: white;
+}
+.scroll li:nth-child(2) strong {
+  font-size: 40px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1.4;
+}
+.scroll li:nth-child(2) strong::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 5px;
+  height: 3px;
+  background: rgb(212, 255, 0);
+  width: 30px;
+}
+.scroll li:nth-child(2) p {
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: 200;
+}
+.pagination-btn {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  left: 900px;
+}
+.pagination-btn span {
+  background: #ffffff;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+.pagination-btn span.on {
+  background: #a7a7a7;
+}
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow .inner {
+  position: absolute;
+  top: 45%;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+}
+.arrow .inner i,
+.pagination-btn span {
+  cursor: pointer;
 }
