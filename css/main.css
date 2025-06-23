@@ -13,7 +13,7 @@
 }
 .scroll li:nth-child(1) {
   position: relative;
-  background-image: url(./images/banner_visual_01.jpg);
+  background-image: url(../images/banner_visual_01.jpg);
   background-repeat: repeat;
   width: 100%;
   height: 676px;
