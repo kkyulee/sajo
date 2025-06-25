@@ -1,0 +1,145 @@
+#content {
+  width: 100%;
+}
+.inner {
+  width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+.con {
+  background-size: cover;
+  background-position: center;
+}
+.con.content1 {
+  background-color: white;
+}
+.con.content2 {
+  background-image: url("./images/social_bg.jpg");
+}
+.con.content3 {
+  background-image: url("./images/tv_bg.jpg");
+}
+.con.content4 {
+  background-color: white;
+}
+
+.con.content1 .inner {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 80px;
+}
+
+.box h3 {
+  font-weight: 500;
+  font-size: 54px;
+  margin-bottom: 30px;
+}
+.box .bigimg .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 260px;
+}
+.box .bigimg p {
+  margin-top: 30px;
+}
+.box h4 {
+  font-weight: 700;
+  font-size: 24px;
+}
+.box p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #5a5a5a;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.box img {
+  border: 1px solid #b0b0b0;
+  border-radius: 40px;
+}
+.box .bigimg {
+  display: flex;
+  justify-content: space-between;
+  height: 260px;
+  margin-bottom: 50px;
+}
+.box .bigimg img {
+  width: 400px;
+  height: 260px;
+}
+
+.box.left,
+.box.right {
+  width: 50%;
+  position: relative;
+  /* border: 1px solid #000; */
+}
+.box .btn {
+  width: 130px;
+  height: 48px;
+  background-color: #0a174e;
+  color: aliceblue;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 40px;
+  position: absolute;
+  left: 260px;
+  bottom: -100px;
+}
+
+.box h4:hover,
+.box p:hover,
+.box span:hover {
+  color: #5a5a5a;
+}
+
+.box.left ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 20px 5px;
+  border-bottom: 1px solid #cbcbcb;
+}
+.box.left ul li span {
+  width: 490px;
+  font-size: 24px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.box.left ul li p {
+  font-size: 18px;
+  text-align: left;
+}
+.box.left ul li:first-child {
+  border-top: 2px solid #cbcbcb;
+}
+
+.simg-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.simg {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.simg img {
+  width: 300px;
+  height: 190px;
+}
+.simg h4 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
