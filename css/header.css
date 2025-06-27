@@ -10,7 +10,7 @@
   position: relative;
   width: 100%;
   background: white;
-  box-shadow: 0 4px 10px  rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 .header-wrap::before {
   content: "";
@@ -95,7 +95,7 @@
   font-size: 14px;
   font-weight: normal;
   /* background: #964545; */
-  z-index: 100;
+  z-index: 99;
   cursor: pointer;
 }
 

@@ -1,5 +1,6 @@
 .inner {
   padding: 40px 0;
+  position: relative;
 }
 
 .customer {
@@ -26,6 +27,10 @@
   padding: 10px 20px;
   border-radius: 20px;
 }
+.tel-btn,
+.site-btn {
+  cursor: pointer;
+}
 .foot-bottom {
   display: flex;
   flex-direction: column;
@@ -48,4 +53,41 @@
   margin-right: 20px;
 }
 .foot-bottom .copyright {
+}
+.tel-popup {
+  display: none;
+
+  background: #4b4b4b;
+  color: #fff;
+  padding: 30px 40px;
+  position: absolute;
+  z-index: 1000;
+  top: -500px;
+  left: 500px;
+  translate: translateY(-50%);
+}
+.tel-popup .xi-close {
+  position: absolute;
+  padding: 20px;
+  top: 20px;
+  right: 30px;
+}
+.tel-popup ul {
+  display: grid;
+  gap: 0 40px;
+  grid-template-columns: repeat(2, auto);
+  flex-wrap: wrap;
+}
+.tel-popup ul li {
+  padding-top: 20px;
+}
+.tel-popup strong {
+  font-size: 20px;
+  font-weight: 800;
+}
+.tel-popup span {
+  font-weight: 600;
+}
+.tel-popup p {
+  font-weight: 400;
 }
