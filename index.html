@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.3/xeicon.min.css"
     />
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/ani.css" />
@@ -262,7 +263,58 @@
               <div class="btn"><i class="xi-plus">더보기</i></div>
             </div>
           </div>
-          <div class="con content4"><div class="inner"></div></div>
+          <div class="con content4">
+            <div class="inner">
+              <div class="grid-wrap">
+                <ul class="grid-wrap1">
+                  <li>
+                    <a href="#" class="item">
+                      <strong>사조그룹 소개</strong>
+                      <p>
+                        가족의 건강과 행복에 앞장서는 기업 <br />사조그룹을
+                        소개합니다.
+                      </p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item">
+                      <strong>사조그룹 역사관</strong>
+                      <p>
+                        세계일류 종합식품기업 <br />
+                        사조그룹의 발자취 입니다.
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="grid-wrap2">
+                  <li>
+                    <a href="#" class="item">
+                      <strong>사회공헌</strong>
+                      <p>
+                        사조그룹은 사랑을 함께 나누고 <br />꿈과 희망을 세상에
+                        전합니다.
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="grid-wrap3">
+                  <li>
+                    <a href="#" class="item">
+                      <strong>윤리경영</strong>
+                      <p>우리 사회의 가치를 높이는 기업</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="item">
+                      <strong>투자정보</strong>
+                      <p>사조그룹 경영실적 보기</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer id="footer"></footer>
@@ -278,6 +330,11 @@
           const script = document.createElement("script");
           script.src = "./js/header.js";
           document.body.appendChild(script);
+        });
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
         });
     </script>
     <script src="js/data.js"></script>

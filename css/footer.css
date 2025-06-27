@@ -1,0 +1,51 @@
+.inner {
+  padding: 40px 0;
+}
+
+.customer {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.customer strong {
+  font-size: 20px;
+  font-weight: 600;
+}
+.customer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.customer .foot-btn {
+  padding-top: 10px;
+}
+.customer .foot-btn span {
+  border: 2px solid #fff;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.foot-bottom {
+  display: flex;
+  flex-direction: column;
+  color: #a9a9a9;
+  position: relative;
+  padding-top: 20px;
+}
+.foot-bottom::after {
+  position: absolute;
+  top: 5px;
+  content: "";
+  border: 1px solid #a9a9a9;
+  width: 100%;
+}
+.foot-bottom .link-area {
+  display: flex;
+  margin-top: 20px;
+}
+.foot-bottom .link-area p {
+  margin-right: 20px;
+}
+.foot-bottom .copyright {
+}

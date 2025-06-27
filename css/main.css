@@ -1,15 +1,4 @@
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: white;
-  width: 100%;
-  z-index: 9999;
-}
-.inner {
-  width: 1400px;
-  position: relative;
-}
+
 #main {
   margin-top: 100px;
 }
