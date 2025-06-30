@@ -1,39 +1,48 @@
 #main {
   margin-top: 100px;
 }
-#visual {
+#visual .ul-wrap {
   position: relative;
+  height: 676px;
+  overflow: hidden; /* 애니메이션 시 이탈 방지 */
 }
-.ul-wrap {
+.scroll {
+  position: relative;
 }
 .scroll li {
-  /* display: none; */
-  position: relative;
-  /* background-repeat: repeat; */
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 676px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
+.scroll li.show {
+  opacity: 1;
+  z-index: 1;
+  pointer-events: auto;
+}
+
 .scroll li:nth-child(1) {
   background-image: url(../images/banner_visual_01.jpg);
 }
 .scroll li:nth-child(1) .text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 220px;
+  left: 320px;
+  text-align: center;
   margin-bottom: 20px;
 }
 .scroll li:nth-child(1) .text em {
   font-size: 18px;
   font-weight: 700;
+  text-align: center;
 }
 .scroll li:nth-child(1) .text span {
   font-size: 40px;
+  text-align: center;
   font-weight: 400;
-  position: relative;
 }
 .scroll li:nth-child(1) .text strong {
   font-weight: 500;
@@ -41,7 +50,7 @@
 .scroll li:nth-child(1) .text span::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  top: 130px;
   left: 50%;
   height: 3px;
   background: rgb(218, 0, 0);
@@ -54,7 +63,6 @@
   margin-top: 40px;
 }
 .scroll li:nth-child(2) {
-  display: none;
   background-image: url(../images/banner_visual_02.jpg);
 }
 

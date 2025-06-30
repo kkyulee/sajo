@@ -1,20 +1,20 @@
-.scroll li:nth-child(1) .text,
-.scroll li:nth-child(1) .text em,
-.scroll li:nth-child(1) .text span,
-.scroll li:nth-child(1) .text p {
+.scroll li:nth-child(1).show .text,
+.scroll li:nth-child(1).show .text em,
+.scroll li:nth-child(1).show .text span,
+.scroll li:nth-child(1).show .text p {
   opacity: 0;
   transform: translateY(40px);
   animation: slideUp 0.6s ease-out forwards;
 }
 
-.scroll li:nth-child(1) .text em {
+.scroll li:nth-child(1).show .text em {
   animation-delay: 0.5s;
 }
-.scroll li:nth-child(1) .text span {
+.scroll li:nth-child(1).show .text span {
   animation-delay: 0.7s;
 }
 
-.scroll li:nth-child(1) .text p {
+.scroll li:nth-child(1).show .text p {
   animation-delay: 1s;
 }
 @keyframes slideUp {
@@ -23,19 +23,19 @@
     transform: translateY(0);
   }
 }
-.scroll li:nth-child(2) .text,
-.scroll li:nth-child(2) strong,
-.scroll li:nth-child(2) p {
+.scroll li:nth-child(2).show .text,
+.scroll li:nth-child(2).show strong,
+.scroll li:nth-child(2).show p {
   opacity: 0;
   transform: translateY(40px);
   animation: slideUp 0.6s ease-out forwards;
 }
 
-.scroll li:nth-child(1) .text strong {
+.scroll li:nth-child(2).show strong {
   animation-delay: 0.5s;
 }
 
-.scroll li:nth-child(2) .text p {
+.scroll li:nth-child(2).show p {
   animation-delay: 0.7s;
 }
 @keyframes slideUp {
@@ -73,3 +73,4 @@
 .social-wrap a img:hover {
   transform: scale(1.1);
 }
+/* footer popUp */
