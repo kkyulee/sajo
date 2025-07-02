@@ -3,7 +3,7 @@
 }
 #visual .ul-wrap {
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .scroll {
   position: relative;
@@ -12,6 +12,8 @@
 }
 .scroll li {
   position: absolute;
+  background-position: 0 0;
+  background-size: cover;
   top: 0;
   left: 0;
   width: 100%;
@@ -119,18 +121,19 @@
   background: #a7a7a7;
 }
 .arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
+  top: 40%;
+  left: 100px;
 }
 .arrow .inner {
+  width: 1700px;
   display: flex;
   justify-content: space-between;
   color: rgb(255, 255, 255);
-  font-size: 50px;
+  font-size: 80px;
 }
 .arrow .inner i,
 .pagination-btn span {
   cursor: pointer;
+  z-index: 99;
 }

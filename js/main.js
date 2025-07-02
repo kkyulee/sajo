@@ -23,15 +23,22 @@ setInterval(() => {
 
 showSlide(idx);
 //슬라이드
+next.addEventListener("click", () => {
+  idx = (idx + 1) % visualLis.length;
+  showSlide(idx);
+});
+prev.addEventListener("click", (e) => {
+  idx = (idx - 1 + visualLis.length) % visualLis.length;
+  showSlide(idx);
+});
 
+//visual
 grid_bg.forEach((item, idx) => {
   item.style.backgroundImage = `url('./images/grid0${idx + 1}_bg.jpg')`;
   item.style.backgroundSize = "cover";
   item.style.backgroundPosition = "center";
   item.addEventListener("mouseenter", (e) => {});
 });
-next.addEventListener("click", (e) => {});
-prev.addEventListener("click", (e) => {});
 
 document.addEventListener("DOMContentLoaded", () => {
   const telList = document.querySelector(".tel-popup ul");
