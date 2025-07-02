@@ -3,11 +3,12 @@
 }
 #visual .ul-wrap {
   position: relative;
-  height: 676px;
-  overflow: hidden; /* 애니메이션 시 이탈 방지 */
+  overflow: hidden; 
 }
 .scroll {
   position: relative;
+  height: 676px;
+  width: 100%;
 }
 .scroll li {
   position: absolute;
@@ -23,7 +24,14 @@
   z-index: 1;
   pointer-events: auto;
 }
+.scroll li img {
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
 
+.scroll li.show img {
+  opacity: 1;
+}
 .scroll li:nth-child(1) {
   background-image: url(../images/banner_visual_01.jpg);
 }
@@ -114,10 +122,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 .arrow .inner {
-  position: absolute;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   color: rgb(255, 255, 255);

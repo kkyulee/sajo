@@ -5,7 +5,6 @@ const next = document.querySelector(".arrow .xi-angle-right-thin");
 const visualLis = document.querySelectorAll("#visual .scroll li");
 const grid_bg = document.querySelectorAll(".con.content4 li");
 const telBtn = document.querySelector(".tel-btn");
-const siteBtn = document.querySelector(".site-btn");
 const iClose = document.querySelector(".xi-close");
 const telPopup = document.querySelector(".tel-popup");
 
@@ -23,13 +22,16 @@ setInterval(() => {
 }, 5000);
 
 showSlide(idx);
-next.addEventListener("click", (e) => {});
+//슬라이드
+
 grid_bg.forEach((item, idx) => {
   item.style.backgroundImage = `url('./images/grid0${idx + 1}_bg.jpg')`;
   item.style.backgroundSize = "cover";
   item.style.backgroundPosition = "center";
   item.addEventListener("mouseenter", (e) => {});
 });
+next.addEventListener("click", (e) => {});
+prev.addEventListener("click", (e) => {});
 
 document.addEventListener("DOMContentLoaded", () => {
   const telList = document.querySelector(".tel-popup ul");
