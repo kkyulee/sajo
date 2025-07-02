@@ -1,14 +1,17 @@
 #main {
   margin-top: 100px;
 }
-#visual .ul-wrap {
-  position: relative;
-  overflow: hidden;
-}
+
 .scroll {
   position: relative;
   height: 676px;
   width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  left: 100px;
+  top: 400px;
 }
 .scroll li {
   position: absolute;
@@ -103,28 +106,24 @@
   font-size: 16px;
   font-weight: 200;
 }
-.pagination-btn {
+.pagination {
   position: absolute;
   display: flex;
-  bottom: 20px;
+  bottom: 150px;
   left: 50%;
   transform: translateX(-50%);
 }
-.pagination-btn span {
-  background: #ffffff;
+.pagination span {
+  background: #bdbdbd;
   margin: 0 5px;
   width: 10px;
   height: 10px;
   border-radius: 10px;
 }
-.pagination-btn span.on {
-  background: #a7a7a7;
+.pagination span.color {
+  background: #2f3f9e;
 }
-.arrow {
-  position: absolute;
-  top: 40%;
-  left: 100px;
-}
+
 .arrow .inner {
   width: 1700px;
   display: flex;
@@ -132,8 +131,8 @@
   color: rgb(255, 255, 255);
   font-size: 80px;
 }
-.arrow .inner i,
-.pagination-btn span {
+.arrow,
+.pagination {
   cursor: pointer;
   z-index: 99;
 }

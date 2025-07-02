@@ -7,30 +7,54 @@ const grid_bg = document.querySelectorAll(".con.content4 li");
 const telBtn = document.querySelector(".tel-btn");
 const iClose = document.querySelector(".xi-close");
 const telPopup = document.querySelector(".tel-popup");
+const pagination = document.querySelector(".pagination");
 
 let idx = 0;
+const visualtotal = visualLis.length;
+for (let i = 0; i < visualtotal; i++) {
+  const pageBtn = document.createElement("span");
+  pageBtn.classList.add("pageBtn");
+  pagination.appendChild(pageBtn);
+}
 
-const showSlide = (i) => {
+const pageBtns = document.querySelectorAll(".pagination .pageBtn");
+const updateBtn = (idx) => {
+  pageBtns.forEach((btn, i) => {
+    btn.classList.remove("color");
+    if (i === idx) btn.classList.add("color");
+  });
+};
+pageBtns.forEach((btn, idx) => {
+  btn.addEventListener("click", (e) => {
+    updateBtn(idx);
+    showSlide(idx);
+  });
+});
+const showSlide = (idx) => {
   visualLis.forEach((li) => {
     li.classList.remove("show");
   });
-  visualLis[i].classList.add("show");
+  visualLis[idx].classList.add("show");
+  updateBtn(idx);
 };
 setInterval(() => {
   idx = (idx + 1) % visualLis.length;
   showSlide(idx);
+  updateBtn(idx);
 }, 5000);
 
-showSlide(idx);
 //슬라이드
 next.addEventListener("click", () => {
   idx = (idx + 1) % visualLis.length;
   showSlide(idx);
+  updateBtn(idx);
 });
 prev.addEventListener("click", (e) => {
   idx = (idx - 1 + visualLis.length) % visualLis.length;
   showSlide(idx);
+  updateBtn(idx);
 });
+showSlide(idx);
 
 //visual
 grid_bg.forEach((item, idx) => {
